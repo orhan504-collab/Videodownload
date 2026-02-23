@@ -11,8 +11,8 @@ dependencies:
   
   youtube_explode_dart: ^2.2.2  
   dio: ^5.4.0                   
-  # Full yerine daha stabil olan Video paketine geçtik
-  ffmpeg_kit_flutter_video: ^6.0.3 
+  # Çok daha geniş uyumluluğu olan "https" paketini kullanıyoruz
+  ffmpeg_kit_flutter_https: ^6.0.3
   path_provider: ^2.1.1         
   cached_network_image: ^3.3.0
 
