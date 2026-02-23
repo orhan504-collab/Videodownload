@@ -3,6 +3,8 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        // FFmpeg için gerekli özel depo
+        maven { url "https://repo1.maven.org/maven2/" }
     }
 
     dependencies {
@@ -15,9 +17,9 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        // FFmpeg ve diğer kütüphanelerin bulunabileceği ek depolar
+        // FFmpeg kütüphanesinin ana vatanı olan depolar
         maven { url "https://jitpack.io" }
-        maven { url "https://maven.google.com" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
     }
 }
 
