@@ -1,0 +1,19 @@
+# Uygulamanın kullandığı kütüphaneler
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # YouTube'dan veri çekmek için
+  youtube_explode_dart: ^2.2.2  
+  
+  # Dosya indirmek için
+  dio: ^5.4.0                   
+  
+  # MP4'ü AVI'ye veya MP3'e çevirmek için (En önemli kısım)
+  ffmpeg_kit_flutter_full: ^6.0.3 
+  
+  # Dosyaları telefona kaydetmek için yol bulucu
+  path_provider: ^2.1.1         
+  
+  # Resimleri internetten çekip önbelleğe almak için
+  cached_network_image: ^3.3.0  
