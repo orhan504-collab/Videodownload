@@ -1,11 +1,11 @@
 buildscript {
-    ext.kotlin_version = '1.8.22'
+    ext.kotlin_version = '1.9.0'
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath 'com.android.tools.build:gradle:8.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -14,8 +14,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        // FFmpeg-kit'in yattığı asıl depo
-        maven { url "https://repo1.maven.org/maven2/" }
+        // FFmpeg'i bulmasını sağlayan ana depo
         maven { url "https://jitpack.io" }
     }
 }
@@ -23,11 +22,4 @@ allprojects {
 rootProject.buildDir = '../build'
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
-    project.evaluationDependsOn(':app')
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }
