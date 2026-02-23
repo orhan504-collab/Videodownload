@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace "com.orhan504.videodownload" // GitHub kullanıcı adına göre güncelledim
+    namespace "com.orhan504.videodownload"
     compileSdk 34
 
     compileOptions {
@@ -30,4 +30,9 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+}
+
+dependencies {
+    // AndroidX gereksinimleri
+    implementation "androidx.multidex:multidex:2.0.1"
 }
