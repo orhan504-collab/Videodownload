@@ -1,5 +1,5 @@
 name: videodownload
-description: YouTube Video ve Müzik İndirici
+description: YouTube Video ve MP3 İndirici
 version: 1.0.0+1
 
 environment:
@@ -8,19 +8,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
   youtube_explode_dart: ^2.2.2  
   dio: ^5.4.0                   
-  # Çok daha geniş uyumluluğu olan "https" paketini kullanıyoruz
-  ffmpeg_kit_flutter_https: ^6.0.3
   path_provider: ^2.1.1         
-  cached_network_image: ^3.3.0
+  permission_handler: ^11.3.1
+  # Hafif ve modern FFmpeg sürümü
+  ffmpeg_kit_flutter_video: 6.0.3 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
-
-flutter:
-  uses-material-design: true
-  
+    
