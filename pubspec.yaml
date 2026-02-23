@@ -1,19 +1,32 @@
-# Uygulamanın kullandığı kütüphaneler
+name: videodownload
+description: YouTube Video ve Müzik İndirici
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
 dependencies:
   flutter:
     sdk: flutter
   
-  # YouTube'dan veri çekmek için
+  # YouTube verileri için
   youtube_explode_dart: ^2.2.2  
   
-  # Dosya indirmek için
+  # İndirme işlemleri için
   dio: ^5.4.0                   
   
-  # MP4'ü AVI'ye veya MP3'e çevirmek için (En önemli kısım)
+  # AVI ve MP3 çevirici (En güncel sürüm)
   ffmpeg_kit_flutter_full: ^6.0.3 
   
-  # Dosyaları telefona kaydetmek için yol bulucu
+  # Dosya yolları ve izinler için
   path_provider: ^2.1.1         
+  cached_network_image: ^3.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
   
-  # Resimleri internetten çekip önbelleğe almak için
-  cached_network_image: ^3.3.0  
