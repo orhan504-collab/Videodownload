@@ -9,16 +9,10 @@ dependencies:
   flutter:
     sdk: flutter
   
-  # YouTube verileri için
   youtube_explode_dart: ^2.2.2  
-  
-  # İndirme işlemleri için
   dio: ^5.4.0                   
-  
-  # AVI ve MP3 çevirici (En güncel sürüm)
-  ffmpeg_kit_flutter_full: ^6.0.3 
-  
-  # Dosya yolları ve izinler için
+  # FFmpeg kit'in daha stabil bir sürümünü deniyoruz
+  ffmpeg_kit_flutter_full: 6.0.3 
   path_provider: ^2.1.1         
   cached_network_image: ^3.3.0
 
@@ -29,3 +23,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  
