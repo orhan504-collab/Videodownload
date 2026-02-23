@@ -11,8 +11,8 @@ dependencies:
   
   youtube_explode_dart: ^2.2.2  
   dio: ^5.4.0                   
-  # FFmpeg kit'in daha stabil bir sürümünü deniyoruz
-  ffmpeg_kit_flutter_full: 6.0.3 
+  # Full yerine daha stabil olan Video paketine geçtik
+  ffmpeg_kit_flutter_video: ^6.0.3 
   path_provider: ^2.1.1         
   cached_network_image: ^3.3.0
 
