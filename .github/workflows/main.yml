@@ -2,33 +2,34 @@ name: Flutter APK Oluşturucu
 
 on:
   push:
-    branches: [ main ] # Kod her güncellendiğinde çalışır
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4 # v3 -> v4 yaptık
+      - name: Kodu Getir
+        uses: actions/checkout@v4
       
       - name: Java Kurulumu
-        uses: actions/setup-java@v4 # v3 -> v4 yaptık
+        uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
-          java-version: '17' # Flutter'ın yeni sürümleri için Java 17 daha iyidir
+          java-version: '17'
           
       - name: Flutter Kurulumu
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.x'
           
-      - name: Bağımlılıkları Yükle
+      - name: Paketleri Yükle
         run: flutter pub get
         
-      - name: APK Derle
+      - name: APK Oluştur (Release)
         run: flutter build apk --release
         
-      - name: APK'yı Kaydet
-        uses: actions/upload-artifact@v4 # Hata veren yer burasıydı, v4 yaptık
+      - name: APK Dosyasını Yükle
+        uses: actions/upload-artifact@v4
         with:
           name: uygulama-apk
           path: build/app/outputs/flutter-apk/app-release.apk
