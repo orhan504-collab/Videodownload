@@ -1,12 +1,12 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <application
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.orhan504.videodownload"> <application
         android:label="Video Download"
         android:name="${applicationName}"
         android:icon="@android:drawable/sym_def_app_icon"
         android:theme="@style/LaunchTheme">
         
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity" 
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
