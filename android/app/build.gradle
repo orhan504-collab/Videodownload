@@ -1,3 +1,17 @@
+// 1. Flutter SDK yolunu belirleyen blok (Hata buradaydı, artık tanımlı)
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
 plugins {
     id "com.android.application"
     id "dev.flutter.flutter-gradle-plugin"
@@ -7,11 +21,6 @@ android {
     namespace "com.orhan504.videodownload"
     compileSdk 34
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-
     defaultConfig {
         applicationId "com.orhan504.videodownload"
         minSdk 24
@@ -19,6 +28,11 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     buildTypes {
@@ -33,5 +47,5 @@ dependencies {
     implementation "androidx.annotation:annotation:1.7.0"
 }
 
-// BU SATIR ÇOK KRİTİK: Eklentilerin otomatik kaydedilmesini sağlar
+// 2. Eklentileri bağlayan satır (Artık flutterRoot değişkenini tanıyor)
 apply from: "$flutterRoot/packages/flutter_tools/gradle/app_plugin_loader.gradle"
