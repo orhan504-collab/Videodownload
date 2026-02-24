@@ -1,5 +1,5 @@
 name: videodownload
-description: YouTube Video ve MP3 İndirici
+description: Temiz YouTube Indirici
 version: 1.0.0+1
 
 environment:
@@ -10,11 +10,13 @@ dependencies:
     sdk: flutter
   youtube_explode_dart: ^2.2.2  
   dio: ^5.4.0                   
-  path_provider: 2.1.2         
-  permission_handler: 11.3.1
-  ffmpeg_kit_flutter_min_gpl: 6.0.3 
+  path_provider: ^2.1.1         
+  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-    
+
+flutter:
+  uses-material-design: true
+  
