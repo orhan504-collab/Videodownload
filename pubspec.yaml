@@ -8,7 +8,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  youtube_explode_dart: ^2.2.2  
+    http: ^1.1.0
+  youtube_explode_dart: ^2.2.2
+  path_provider: ^2.1.1
   dio: ^5.4.0                   
   path_provider: ^2.1.1         
   permission_handler: ^11.3.1
