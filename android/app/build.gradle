@@ -31,12 +31,7 @@ android {
 }
 
 dependencies {
-    // Log ve NonNull hatalarını kökten çözen temel Android kütüphaneleri
-    implementation "androidx.appcompat:appcompat:1.6.1"
-    implementation "androidx.annotation:annotation:1.7.1"
     implementation "androidx.multidex:multidex:2.0.1"
+    implementation "androidx.appcompat:appcompat:1.6.1"
     implementation "com.google.android.material:material:1.11.0"
-    
-    // Flutter motorunun Android ile düzgün konuşmasını sağlayan kritik satır:
-    implementation "io.flutter:flutter_embedding_release:1.0.0-+"
 }
