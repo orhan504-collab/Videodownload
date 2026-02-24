@@ -1,5 +1,6 @@
 name: videodownload
-description: Temiz YouTube Indirici
+description: Video indirici ve dönüştürücü uygulama.
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
@@ -8,16 +9,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cupertino_icons: ^1.0.2
   http: ^1.1.0
   youtube_explode_dart: ^2.2.2
   path_provider: ^2.1.1
-  dio: ^5.4.0
-  permission_handler: ^11.3.1
-  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
