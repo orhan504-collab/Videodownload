@@ -50,7 +50,7 @@ class VideoCard extends StatelessWidget {
         style: OutlinedButton.styleFrom(
           padding: EdgeInsets.zero,
           side: const BorderSide(color: Colors.indigo),
-          shape: RoundedRectangle.circular(4),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)), // HATA BURADAYDI, DÜZELTİLDİ
           backgroundColor: isPlay ? Colors.white : Colors.transparent,
         ),
         onPressed: onTap,
@@ -58,6 +58,7 @@ class VideoCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(icon, size: 12, color: Colors.indigo),
+            const SizedBox(width: 2),
             Text(label, style: const TextStyle(color: Colors.indigo, fontSize: 9)),
           ],
         ),
