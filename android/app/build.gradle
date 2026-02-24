@@ -3,6 +3,14 @@ plugins {
     id "dev.flutter.flutter-gradle-plugin"
 }
 
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
 android {
     namespace "com.orhan504.videodownload"
     compileSdk 34
@@ -14,7 +22,7 @@ android {
 
     defaultConfig {
         applicationId "com.orhan504.videodownload"
-        minSdk 24
+        minSdk 24 // FFmpeg için en az 24 önerilir
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -23,11 +31,16 @@ android {
 
     buildTypes {
         release {
+            // Debug sertifikasıyla imzala (şart değil ama derleme için kolaylık sağlar)
             signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
         }
     }
 }
 
 dependencies {
+    // Kütüphanelerin Android tarafında tanınması için gerekli temel bağımlılıklar
     implementation "androidx.multidex:multidex:2.0.1"
+    implementation "androidx.annotation:annotation:1.7.0"
 }
