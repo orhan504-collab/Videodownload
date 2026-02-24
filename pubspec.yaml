@@ -12,10 +12,14 @@ dependencies:
   dio: ^5.4.0                   
   path_provider: ^2.1.1         
   permission_handler: ^11.3.1
-  # En stabil LTS sürümü
-  ffmpeg_kit_flutter_video: 4.5.0-LTS 
+  # Modern ve hızlı derlenen sürüm
+  ffmpeg_kit_flutter_min_gpl: ^6.0.3 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-    
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
