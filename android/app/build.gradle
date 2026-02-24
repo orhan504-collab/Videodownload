@@ -36,4 +36,7 @@ dependencies {
     implementation "androidx.annotation:annotation:1.7.1"
     implementation "androidx.multidex:multidex:2.0.1"
     implementation "com.google.android.material:material:1.11.0"
+    
+    // Flutter motorunun Android ile düzgün konuşmasını sağlayan kritik satır:
+    implementation "io.flutter:flutter_embedding_release:1.0.0-+"
 }
